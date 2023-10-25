@@ -1,0 +1,197 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": []
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "rPQXpmBpION2",
+        "outputId": "34796f53-2afe-4c17-ebcf-b4b6e33c8e49"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\n",
+            "[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\n",
+            "[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\n",
+            "[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\n",
+            "[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\n",
+            "[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\n",
+            "[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\n",
+            "[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\n",
+            "[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\n",
+            "[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\n"
+          ]
+        }
+      ],
+      "source": [
+        "def selectionSort(alist):\n",
+        "  for slot in range(0,len(alist)-1):\n",
+        "    position=slot\n",
+        "    for location in range(slot+1,len(alist)):\n",
+        "      if alist[location]<alist[position]:\n",
+        "        position = location\n",
+        "\n",
+        "    temp = alist[slot]\n",
+        "    alist[slot] = alist[position]\n",
+        "    alist[position] = temp\n",
+        "    print(alist)\n",
+        "number = [1,2,3,4,5,6,7,8,9,10]\n",
+        "selectionSort(number)\n",
+        "print(number)"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "PRAKTIKUM 2 STRUKTUR DATA"
+      ],
+      "metadata": {
+        "id": "k_ZU6Vy5P9yR"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#contoh penggunaan tuple\n",
+        "\n",
+        "#program 1\n",
+        "#Create a tuple with different data types\n",
+        "print(\"program 1\")\n",
+        "tuplex = (\"tuple\", False, 3.2, 1)\n",
+        "print(tuplex)\n",
+        "\n",
+        "#program 2\n",
+        "print(\"program 2\")\n",
+        "#Create a tuple with numbers\n",
+        "tuplex = 5, 10, 15, 20, 25\n",
+        "print(tuplex)\n",
+        "#Create a tuple of one item\n",
+        "tuplex = 5,\n",
+        "print(tuplex)\n",
+        "\n",
+        "print(\"program 3\")\n",
+        "#program 3\n",
+        "#create a tuple\n",
+        "tuplex = (4, 6, 2, 8, 3, 1)\n",
+        "print(tuplex)\n",
+        "#tuples are immutable, so you can not add new elements\n",
+        "#using merge of tuples with the + operator you can add an element and it will create a new tuple\n",
+        "tuplex = tuplex + (9,)\n",
+        "print(tuplex)\n",
+        "#adding items in a specific index\n",
+        "tuplex = tuplex[:5] + (15, 20, 25) + tuplex[:5]\n",
+        "print(tuplex)\n",
+        "#converting the tuple to list\n",
+        "listx = list(tuplex)\n",
+        "#use different ways to add items in list\n",
+        "listx.append(30)\n",
+        "tuplex = tuple(listx)\n",
+        "print(tuplex)\n",
+        "\n",
+        "print(\"program 4\")\n",
+        "#program 4\n",
+        "#create a tuple\n",
+        "tuplex = (4, 6, 2, 8, 3, 1)\n",
+        "print(tuplex)\n",
+        "#tuples are immutable, so you can not add new elements\n",
+        "#using merge of tuples with the + operator you can add an element and it will create a new tuple\n",
+        "tuplex = tuplex + (9,)\n",
+        "print(tuplex)\n",
+        "#adding items in a specific index\n",
+        "tuplex = tuplex[:5] + (15, 20, 25) + tuplex[:5]\n",
+        "print(tuplex)\n",
+        "#converting the tuple to list\n",
+        "listx = list(tuplex)\n",
+        "#use different ways to add items in list\n",
+        "listx.append(30)\n",
+        "tuplex = tuple(listx)\n",
+        "print(tuplex)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "tyNGTttUP4H6",
+        "outputId": "7de97018-1b8b-4a16-9e79-0a7c684936a4"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "program 1\n",
+            "('tuple', False, 3.2, 1)\n",
+            "program 2\n",
+            "(5, 10, 15, 20, 25)\n",
+            "(5,)\n",
+            "program 3\n",
+            "(4, 6, 2, 8, 3, 1)\n",
+            "(4, 6, 2, 8, 3, 1, 9)\n",
+            "(4, 6, 2, 8, 3, 15, 20, 25, 4, 6, 2, 8, 3)\n",
+            "(4, 6, 2, 8, 3, 15, 20, 25, 4, 6, 2, 8, 3, 30)\n",
+            "program 4\n",
+            "(4, 6, 2, 8, 3, 1)\n",
+            "(4, 6, 2, 8, 3, 1, 9)\n",
+            "(4, 6, 2, 8, 3, 15, 20, 25, 4, 6, 2, 8, 3)\n",
+            "(4, 6, 2, 8, 3, 15, 20, 25, 4, 6, 2, 8, 3, 30)\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "DICTIONARY"
+      ],
+      "metadata": {
+        "id": "66KdXCMuSlVw"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "person = {'Name' : 'Figo Ahnaf Kalevi', 'Jobdesk' : 'Operator Fotocopy'}\n",
+        "print(person['Name'])\n",
+        "print(person['Jobdesk'])"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "XF5EM7YoRhEl",
+        "outputId": "daa7c7d0-2449-4f00-85f8-63ab139c2b63"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Figo Ahnaf Kalevi\n",
+            "Operator Fotocopy\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
